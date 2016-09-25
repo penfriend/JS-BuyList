@@ -1,22 +1,3 @@
-.bl-background {
-    background: #cdcbcb;
-    padding: 20px;
-}
-
-.bl-list {
-    background: white;
-    margin-bottom: 10px;
-    margin-right: 490px;
-}
-
-.bl-bought {
-    background: white;
-}
-
-/*Кнопки*/
-.bl-label {
-    background: #cdcbcb;
-}
-.bl-plus {
-    background: #04a613;
+h1 {
+    color: red;
 }

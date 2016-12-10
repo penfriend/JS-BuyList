@@ -1,6 +1,5 @@
 body{
-    background: #cdcbcb;
-    width: 100%;
+    background: #cdcbcb;   
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
@@ -8,8 +7,8 @@ body{
     width: 100%;    
     margin: auto;
     margin-top: 100px;
-    min-width: 825px;
-    max-width: 1070px;
+    min-width: 900px;  
+    max-width: 1070px;  
     
 }
 .bl-bought{
@@ -62,14 +61,16 @@ body{
 .add_product{
      text-align: center;
     height: 33px;
-    padding: 15px;
-    padding-bottom: 10px;
-    
+    padding-top:15px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 10px;    
 }
 .product-input{
-    width: 84%;
+    width: 80%;
     height: 32px;
-     border-radius: 5px;
+    border-radius: 5px;
+    padding-left: 10px;
 }
 .bl-button_add{
     background: blue;
@@ -80,6 +81,7 @@ body{
      height: 38px;
     margin-left: -8px;
     border-radius: 0 5px 5px 0;
+    
 }
 hr{
     width: 100%;
@@ -135,8 +137,7 @@ hr{
 
 .bl-product_rest, .bl-label_rest{
     display: inline-block;
-    margin-top: 3px;
-    
+    margin-top: 3px;    
 }
 .bl-holder_product_rest{
     margin-left: 3px;
@@ -163,3 +164,78 @@ hr{
     text-align: center;
     padding-top: 3px;
 }
+.badge{
+    position: fixed;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 7px 7px 0 0;
+    height: 60px;
+    width: 90px;
+    bottom: -44px;
+    left: 18px;   
+    padding: 20px; 
+    transition: all 500ms ease;
+}
+.badge:hover{
+    background-color: blue;
+     bottom: 0px;
+}
+.badge-title{
+font-family: inherit;
+font-weight: 500;
+font-size: 19px;    
+ padding-bottom: 16px;
+}
+.badge-body-preauthor{
+   font-size: 11px; 
+}
+button{
+    position: relative;
+}
+ button::before
+  {
+   content: attr(data-tooltip);
+   position: absolute;
+   font-size: 8px;
+   top: -29px;
+   left: -27px;
+   right: -27px;
+   border-radius: 5px;
+   padding: 8px;
+   color: white;
+   background-color: blueviolet;
+      transform: scale(0.5) translateY(20px);
+    transition: all 350ms ease;
+      opacity:0;
+      
+  }
+button:hover::before
+  {
+      opacity:1;
+      display: block;
+      transform: scale(1) translateY(0px);
+}
+@media print{
+    .badge-body-preauthor, .badge-body-author{
+        color: black;
+    }
+    .badge{
+        bottom: 0;
+        color:black;
+        border: 1px solid black; 
+        height: 27px;
+    } 
+     .badge-title{
+        display: none;
+    } 
+    
+} 
+@media	(max-width:	500px)	{
+    .bl-list, .bl-bought{
+        float: none;
+        width: 100%;
+        border: 1px solid black; 
+        margin: 5px;        
+    }     
+}
+

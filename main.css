@@ -4,6 +4,7 @@ body{
     font-size: 14px;
 }
 .bl-background{
+    box-sizing: border-box;
     width: 100%;    
     margin: auto;
     margin-top: 100px;
@@ -12,9 +13,11 @@ body{
     
 }
 .bl-bought{
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
     background-color: white;
     width: 285px;
-    height: 183px;
     float: right;
     padding: 5px;
     border-radius: 5px;
@@ -36,11 +39,13 @@ body{
     padding-left: 12px;
     width: 23%;
     height: 25px;
+    text-decoration: none;
 }
 .bl-count{
     width: 50%;
      height: 25px;
     text-align: center;
+    border: 0px;
 }
 .bl-buttons{
      width: 22%;
@@ -51,14 +56,19 @@ body{
 .add{
     display: inline;
 }
-.bl-products_rest, .bl-holder_product_rest, .bl-product_bought, .bl-holder_product_bought{
+.bl-products-rest, .bl-product-bought{
     height: 30px;
 }
-.bl-products_rest, .bl-product_bought{
-   height: 23px;
+.bl-holder-product-rest, .bl-holder-product-bought{
+    box-sizing: border-box;
+    background: white;
+    height: 100%;
+}
+.bl-products-rest, .bl-product-bought{
+    height: 23px;
     padding-left: 10px;
 }
-.add_product{
+.add-product{
      text-align: center;
     height: 33px;
     padding-top:15px;
@@ -72,16 +82,16 @@ body{
     border-radius: 5px;
     padding-left: 10px;
 }
-.bl-button_add{
+.bl-button-add{
     background: blue;
     color: white;
     font-family: inherit;
     font-weight: bold;
     width: 15%;  
-     height: 38px;
+    height: 38px;
     margin-left: -8px;
     border-radius: 0 5px 5px 0;
-    
+    border:0;
 }
 hr{
     width: 100%;
@@ -95,8 +105,10 @@ hr{
     font-weight: bold;
     font-size: 14px;
     border-radius: 50%;
+    border: 0;
     height: 31px;
     width: 32px;
+    opacity: .7;
 }
 .bl-label{
     background: #cdcbcb;
@@ -112,57 +124,67 @@ hr{
     font-weight: bold;
     font-size: 14px;
     border-radius: 50%;
+    border: 0;
     height: 31px;
     width: 32px;
-    
+        
 }
 .bl-buttonBought{
      
     font-size: 11px;
     border-radius: 5px;
+    border: 0;
     height: 33px;
     width: 80px;
     padding: 10px;
     
 }
 .bl-buttonDelete{
-     background-color: red;
+    background-color: red;
     color: white;
     font-weight: bold;
     font-size: 11px;
     border-radius: 5px;
+    border: 0;
     height: 31px;
     width: 32px;
 }
 
-.bl-product_rest, .bl-label_rest{
+.bl-product-rest, .bl-label-rest{
     display: inline-block;
     margin-top: 3px;    
 }
-.bl-holder_product_rest{
+.bl-holder-product-rest, .bl-holder-product-bought{
     margin-left: 3px;
     padding: 5px;
 }
 
-.bl-product_rest{
+.bl-product-rest{
    background: #cdcbcb;
     font-size: 10px;
     border-radius: 5px;
      height: 20px;
-    width: 75px;
-    padding: 2px;
+    /*width: 75px;*/
+   /* padding: 2px; */
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 4px;
+    padding-top: 3px;
   text-align: center;
    
 }
-.bl-label_rest{
+.bl-label-rest{
      background-color: orange;
     color: white;
     font-size: 9px;
-    border-radius: 50%;
+    border-radius: 70%;
     height: 14px;
     width: 17px;
     text-align: center;
     padding-top: 3px;
+    padding-right: 1px;
+    padding-left: 1px;
+    padding-bottom: 0;
 }
 .badge{
     position: fixed;
@@ -224,12 +246,12 @@ button:hover::before
         color:black;
         border: 1px solid black; 
         height: 27px;
-    } 
+    }
      .badge-title{
         display: none;
-    } 
+    }
     
-} 
+}
 @media	(max-width:	500px)	{
     .bl-list, .bl-bought{
         float: none;
@@ -238,4 +260,25 @@ button:hover::before
         margin: 5px;        
     }     
 }
-
+.bl-row-template{   
+    width:100%;
+    display: none;
+}
+.state-active{
+    opacity: 1;
+}
+.state-bought{
+    opacity: .7;
+}
+.state-bought-product{
+    text-decoration: line-through;
+}
+.obvertka{
+    display:inline;
+}
+.box-for-rest-product{
+       display: none;
+}
+.bl-product-rest{
+    margin-right: 3px;
+}
